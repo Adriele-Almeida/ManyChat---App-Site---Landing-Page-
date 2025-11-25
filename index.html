@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Treinamento ao Vivo - Sites e Apps com IA 100% Gratuitos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Treinamento ao vivo: Como criar sites profissionais e aplicativos gratuitos usando Inteligência Artificial, sem saber programar." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Treinamento ao Vivo" />
+  <meta property="og:description" content="Como criar sites e aplicativos usando IA — em plataformas gratuitas." />
+  <meta property="og:image" content="hero-principal.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pay.kiwify.com.br/JamocOx" />
+
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-alt: #050b1f;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --accent-strong: #0ea5e9;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --danger: #f97373;
+      --radius: 14px;
+      --shadow-soft: 0 18px 60px rgba(15, 23, 42, 0.85);
+      --border-subtle: rgba(148, 163, 184, 0.35);
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    }
+
+    /* REMOVIDO: MATRIX EFFECT */
+    /* REMOVIDO: #matrix-canvas */
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font-main);
+      background: var(--bg);
+      color: var(--text);
+      position: relative;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+
+    /* (todo o restante do seu CSS permanece igual) ... */
+  </style>
+</head>
+
+<body>
+
+<!-- REMOVIDO: <canvas id="matrix-canvas"></canvas> -->
+
+<div class="page">
+
+  <!-- (todo o restante da sua página continua igual) -->
+
+</div>
+
+<script>
+/* REMOVIDO: TODO O SCRIPT DO MATRIX EFFECT */
+
+/* MANTIDO: SCRIPT DO COUNTDOWN TIMER */
+const eventDate = new Date('2025-11-29T14:00:00-03:00').getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = eventDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById('days').textContent = String(days).padStart(2, '0');
+  document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+  document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+  document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+  if (distance < 0) {
+    document.querySelector('.countdown-title').textContent = 'O treinamento está acontecendo agora!';
+    document.getElementById('days').textContent = '00';
+    document.getElementById('hours').textContent = '00';
+    document.getElementById('minutes').textContent = '00';
+    document.getElementById('seconds').textContent = '00';
+  }
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+
+</body>
+</html>
