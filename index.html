@@ -29,8 +29,9 @@
       --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
     }
 
-    /* REMOVIDO: MATRIX EFFECT */
-    /* REMOVIDO: #matrix-canvas */
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -39,6 +40,7 @@
       background: var(--bg);
       color: var(--text);
       position: relative;
+      line-height: 1.6;
     }
 
     .page {
@@ -49,24 +51,464 @@
       padding: 24px 16px 64px;
     }
 
-    /* (todo o restante do seu CSS permanece igual) ... */
+    /* Header */
+    header {
+      text-align: center;
+      padding: 40px 0 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 0;
+      border-radius: var(--radius);
+      margin-bottom: 60px;
+    }
+
+    .hero-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      margin-bottom: 30px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0 0 20px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: clamp(18px, 3vw, 22px);
+      color: var(--muted);
+      margin: 0 auto 30px;
+      max-width: 700px;
+    }
+
+    /* Countdown */
+    .countdown-section {
+      background: var(--bg-alt);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 40px 20px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .countdown-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: var(--accent);
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .countdown-item {
+      background: var(--accent-soft);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 20px;
+      min-width: 100px;
+    }
+
+    .countdown-number {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--accent);
+      display: block;
+    }
+
+    .countdown-label {
+      font-size: 14px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* CTA Button */
+    .cta-button {
+      display: inline-block;
+      padding: 18px 48px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.4);
+    }
+
+    /* Benefits Section */
+    .benefits {
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--text);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .benefit-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(56, 189, 248, 0.2);
+    }
+
+    .benefit-icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .benefit-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0 0 10px;
+      color: var(--accent);
+    }
+
+    .benefit-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Instructor Section */
+    .instructor {
+      background: var(--bg-alt);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 40px;
+      margin-bottom: 60px;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .instructor-image {
+      flex: 0 0 200px;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+      max-width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .instructor-content {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .instructor-content h2 {
+      font-size: 32px;
+      font-weight: 800;
+      margin: 0 0 15px;
+      color: var(--accent);
+    }
+
+    .instructor-content p {
+      margin: 0 0 15px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* What You'll Learn */
+    .learn-section {
+      margin-bottom: 60px;
+    }
+
+    .learn-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .learn-item {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      background: var(--bg-alt);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .learn-check {
+      color: var(--accent);
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .learn-text {
+      font-size: 16px;
+      color: var(--text);
+      margin: 0;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 0 20px;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 60px;
+      color: var(--muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 30px 0;
+      }
+
+      .instructor {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .instructor-image {
+        margin: 0 auto;
+      }
+
+      .countdown {
+        gap: 10px;
+      }
+
+      .countdown-item {
+        min-width: 80px;
+        padding: 15px;
+      }
+
+      .countdown-number {
+        font-size: 36px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<!-- REMOVIDO: <canvas id="matrix-canvas"></canvas> -->
-
 <div class="page">
 
-  <!-- (todo o restante da sua página continua igual) -->
+  <!-- Header -->
+  <header>
+    <div class="logo">🚀 Treinamento ao Vivo</div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="hero-principal.png" alt="Treinamento ao Vivo" class="hero-image">
+    <h1>Crie Sites e Apps Profissionais com IA 100% Gratuitos</h1>
+    <p>Aprenda a criar sites profissionais e aplicativos gratuitos usando Inteligência Artificial, sem precisar saber programar.</p>
+    <a href="https://pay.kiwify.com.br/JamocOx" class="cta-button" target="_blank">Quero Participar Gratuitamente</a>
+  </section>
+
+  <!-- Countdown -->
+  <section class="countdown-section">
+    <h2 class="countdown-title">O treinamento começa em:</h2>
+    <div class="countdown">
+      <div class="countdown-item">
+        <span class="countdown-number" id="days">00</span>
+        <span class="countdown-label">Dias</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="hours">00</span>
+        <span class="countdown-label">Horas</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="minutes">00</span>
+        <span class="countdown-label">Minutos</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="seconds">00</span>
+        <span class="countdown-label">Segundos</span>
+      </div>
+    </div>
+    <a href="https://pay.kiwify.com.br/JamocOx" class="cta-button" target="_blank">Garantir Minha Vaga</a>
+  </section>
+
+  <!-- Benefits -->
+  <section class="benefits">
+    <h2 class="section-title">O Que Você Vai Aprender</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🎨</div>
+        <h3>Sites Profissionais</h3>
+        <p>Aprenda a criar sites lindos e funcionais usando ferramentas de IA, sem escrever uma linha de código.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📱</div>
+        <h3>Apps Gratuitos</h3>
+        <p>Descubra como desenvolver aplicativos completos em plataformas 100% gratuitas com ajuda da Inteligência Artificial.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🤖</div>
+        <h3>Poder da IA</h3>
+        <p>Domine as principais ferramentas de IA para automatizar e acelerar seu processo de criação.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💰</div>
+        <h3>100% Gratuito</h3>
+        <p>Todas as ferramentas e plataformas apresentadas têm versões gratuitas que você pode usar imediatamente.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">⚡</div>
+        <h3>Resultados Rápidos</h3>
+        <p>Saia do treinamento com seus primeiros projetos prontos e funcionando.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🎓</div>
+        <h3>Sem Pré-requisitos</h3>
+        <p>Não precisa saber programar ou ter conhecimentos técnicos avançados.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You'll Learn -->
+  <section class="learn-section">
+    <h2 class="section-title">Conteúdo do Treinamento</h2>
+    <div class="learn-list">
+      <div class="learn-item">
+        <span class="learn-check">✓</span>
+        <p class="learn-text">Como usar ChatGPT e outras IAs para criar layouts profissionais</p>
+      </div>
+      <div class="learn-item">
+        <span class="learn-check">✓</span>
+        <p class="learn-text">Plataformas gratuitas para hospedar seus sites e apps</p>
+      </div>
+      <div class="learn-item">
+        <span class="learn-check">✓</span>
+        <p class="learn-text">Técnicas para criar designs modernos sem conhecer design</p>
+      </div>
+      <div class="learn-item">
+        <span class="learn-check">✓</span>
+        <p class="learn-text">Como integrar funcionalidades avançadas nos seus projetos</p>
+      </div>
+      <div class="learn-item">
+        <span class="learn-check">✓</span>
+        <p class="learn-text">Estratégias para monetizar seus sites e aplicativos</p>
+      </div>
+      <div class="learn-item">
+        <span class="learn-check">✓</span>
+        <p class="learn-text">Bônus: Templates e recursos exclusivos para começar mais rápido</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instructor -->
+  <section class="instructor">
+    <img src="adriele-foto.png" alt="Adriele Almeida" class="instructor-image">
+    <div class="instructor-content">
+      <h2>Adriele Almeida</h2>
+      <p>Especialista em desenvolvimento de sites e aplicativos usando Inteligência Artificial. Com anos de experiência em tecnologia e educação digital, Adriele já ajudou centenas de pessoas a transformarem suas ideias em realidade usando ferramentas gratuitas e acessíveis.</p>
+      <p>Neste treinamento ao vivo, você vai aprender exatamente como criar projetos profissionais sem gastar nada, usando o poder das IAs mais modernas disponíveis no mercado.</p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section>
+    <h2 class="section-title">Exemplos de Projetos</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="sites-suafoto.png" alt="Exemplo de site">
+      </div>
+      <div class="gallery-item">
+        <img src="mockup-suafoto.png" alt="Mockup de aplicativo">
+      </div>
+      <div class="gallery-item">
+        <img src="instrutora-suafoto.png" alt="Conteúdo do curso">
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section style="text-align: center; margin-top: 60px;">
+    <h2 class="section-title">Não Perca Esta Oportunidade!</h2>
+    <p style="font-size: 20px; color: var(--muted); margin-bottom: 30px;">
+      Vagas limitadas para o treinamento ao vivo. Garanta sua vaga agora!
+    </p>
+    <a href="https://pay.kiwify.com.br/JamocOx" class="cta-button" target="_blank">Sim, Quero Participar!</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Treinamento ao Vivo - Sites e Apps com IA. Todos os direitos reservados.</p>
+  </footer>
 
 </div>
 
 <script>
-/* REMOVIDO: TODO O SCRIPT DO MATRIX EFFECT */
-
-/* MANTIDO: SCRIPT DO COUNTDOWN TIMER */
+/* Countdown Timer */
 const eventDate = new Date('2025-11-29T14:00:00-03:00').getTime();
 
 function updateCountdown() {
