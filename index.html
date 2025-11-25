@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <!-- v2.0 - Atualização 25/11/2025 -->
   <title>Treinamento ao Vivo - Sites e Apps com IA 100% Gratuitos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Treinamento ao vivo: Como criar sites profissionais e aplicativos gratuitos usando Inteligência Artificial, sem saber programar." />
@@ -224,11 +225,10 @@
 
     .hero-list li:before {
       content: "✔";
-      color: #38bdf8;
+      color: #38bdf8 !important;
       font-size: 18px;
       font-weight: 700;
       flex-shrink: 0;
-      text-shadow: 0 0 15px rgba(56, 189, 248, 0.9);
       margin-top: 2px;
     }
 
@@ -314,6 +314,7 @@
       max-width: 400px;
       text-align: center;
       margin: 0 auto;
+      box-sizing: border-box;
     }
 
     .btn-primary:hover {
@@ -368,11 +369,6 @@
         display: flex;
         flex-direction: column;
       }
-      /* Mobile: imagem primeiro, depois texto */
-      .two-cols-mobile-reverse {
-        display: flex;
-        flex-direction: column-reverse;
-      }
       /* Imagem sempre primeiro no mobile */
       .image-box {
         order: -1;
@@ -387,6 +383,8 @@
       .btn-primary {
         width: 100%;
         max-width: 100%;
+        padding: 16px 20px;
+        font-size: 14px;
       }
       .countdown-number {
         font-size: 18px;
@@ -426,11 +424,10 @@
     }
 
     .check-icon {
-      color: #38bdf8;
+      color: #38bdf8 !important;
       font-size: 18px;
       font-weight: 700;
       flex-shrink: 0;
-      text-shadow: 0 0 20px rgba(56, 189, 248, 1);
       margin-top: 2px;
     }
 
@@ -641,6 +638,13 @@
   <img src="hero-principal.png" alt="Treinamento IA" style="width: 100%; max-width: 900px; border-radius: 20px; border: 1px solid rgba(148, 163, 184, 0.35); box-shadow: 0 20px 60px rgba(56, 189, 248, 0.2);">
 </div>
 
+<!-- CTA APÓS IMAGEM HERO -->
+<div style="text-align: center; margin-bottom: 40px; padding: 0 16px;">
+  <a href="https://pay.kiwify.com.br/JamocOx" class="btn-primary" target="_blank">
+    Quero Garantir Minha Vaga
+  </a>
+</div>
+
 <main>
 
 <!-- HERO -->
@@ -683,13 +687,28 @@
   </div>
 
   <aside class="hero-secondary">
-    <div class="hero-tag">Como Funciona</div>
-    <p class="hero-card-text">
-      Você realizará a compra do acesso pela Kiwify e, no dia do treinamento, receberá o link para participar da aula ao vivo. A gravação ficará disponível posteriormente, permitindo que você assista quantas vezes desejar.
-    </p>
-
+    <div class="hero-tag">Para quem é</div>
     <div class="hero-image-frame">
-      <img src="hero-suafoto.png" alt="Ambiente de treinamento">
+      <img src="instrutora-suafoto.png" alt="Para quem é">
+    </div>
+
+    <ul class="check-list" style="margin-top: 12px;">
+      <li><span class="check-icon">✔</span> Quem quer criar ferramentas poderosas para crescer no Instagram</li>
+      <li><span class="check-icon">✔</span> Começar um novo negócio digital sem nenhum investimento inicial</li>
+      <li><span class="check-icon">✔</span> Empreendedores que querem criar soluções rápidas com IA</li>
+      <li><span class="check-icon">✔</span> Social media que precisam de ferramentas para acelerar resultados</li>
+      <li><span class="check-icon">✔</span> Designers que desejam agregar mais valor aos seus projetos</li>
+      <li><span class="check-icon">✔</span> Produtores digitais que buscam novas formas de entregar experiências</li>
+      <li><span class="check-icon">✔</span> Freelancers que querem ampliar seus serviços com automações e apps simples</li>
+      <li><span class="check-icon">✔</span> Quem nunca mexeu com IA e quer aprender de forma rentável</li>
+      <li><span class="check-icon">✔</span> Quem deseja criar aplicações próprias sem conhecimento técnico</li>
+      <li><span class="check-icon">✔</span> Quem quer iniciar sua renda no digital com projetos práticos</li>
+    </ul>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="https://pay.kiwify.com.br/JamocOx" class="btn-primary" target="_blank">
+        Quero Garantir Minha Vaga
+      </a>
     </div>
   </aside>
 </div>
@@ -748,6 +767,13 @@
   <p style="margin-top:16px;">
     Você pode criar para você ou transformar em renda, vendendo seus projetos digitalmente.
   </p>
+
+  <!-- CTA APÓS OS 3 CARDS -->
+  <div style="text-align: center; margin-top: 32px; padding: 0 16px;">
+    <a href="https://pay.kiwify.com.br/JamocOx" class="btn-primary" target="_blank">
+      Quero Garantir Minha Vaga
+    </a>
+  </div>
 </section>
 
 <!-- SEÇÃO 4 -->
@@ -783,32 +809,38 @@
     <li><span class="check-icon">✔</span> Projetos com qualidade profissional para portfólio</li>
     <li><span class="check-icon">✔</span> Aplicações simples criadas sem exigir habilidades</li>
   </ul>
+
+  <!-- CTA FINAL SEÇÃO DIFERENCIAL -->
+  <div style="text-align: center; margin-top: 32px; padding: 0 16px;">
+    <a href="https://pay.kiwify.com.br/JamocOx" class="btn-primary" target="_blank">
+      Quero Garantir Minha Vaga
+    </a>
+  </div>
 </section>
 
 <!-- SEÇÃO 6 -->
-<section id="para-quem">
-  <div class="two-cols two-cols-mobile-reverse">
+<section id="como-funciona">
+  <div class="two-cols">
     <div class="image-box">
-      <img src="instrutora-suafoto.png" alt="Instrutora">
+      <img src="hero-suafoto.png" alt="Ambiente de treinamento">
     </div>
 
     <div>
-      <div class="section-tag">Para quem é</div>
-      <h2>Este treinamento é para você que deseja:</h2>
-
-      <ul class="check-list">
-        <li><span class="check-icon">✔</span> Quem quer criar ferramentas poderosas para crescer no Instagram</li>
-        <li><span class="check-icon">✔</span> Começar um novo negócio digital sem nenhum investimento inicial</li>
-        <li><span class="check-icon">✔</span> Empreendedores que querem criar soluções rápidas com IA</li>
-        <li><span class="check-icon">✔</span> Social media que precisam de ferramentas para acelerar resultados</li>
-        <li><span class="check-icon">✔</span> Designers que desejam agregar mais valor aos seus projetos</li>
-        <li><span class="check-icon">✔</span> Produtores digitais que buscam novas formas de entregar experiências</li>
-        <li><span class="check-icon">✔</span> Freelancers que querem ampliar seus serviços com automações e apps simples</li>
-        <li><span class="check-icon">✔</span> Quem nunca mexeu com IA e quer aprender de forma rentável</li>
-        <li><span class="check-icon">✔</span> Quem deseja criar aplicações próprias sem conhecimento técnico</li>
-        <li><span class="check-icon">✔</span> Quem quer iniciar sua renda no digital com projetos práticos</li>
-      </ul>
+      <div class="section-tag">Como Funciona</div>
+      <h2>Simples e direto</h2>
+      <p>Você realizará a compra do acesso pela Kiwify e, no dia do treinamento, receberá o link para participar da aula ao vivo.</p>
+      <p>A gravação ficará disponível posteriormente, permitindo que você assista quantas vezes desejar.</p>
+      <p><strong>Formato:</strong> Online, ao vivo, com demonstrações práticas</p>
+      <p><strong>Replay:</strong> Acesso garantido para todos os inscritos, sem limite de visualizações</p>
+      <p><strong>Bônus:</strong> Guia completo e estruturado para você repetir cada passo depois da aula</p>
     </div>
+  </div>
+
+  <!-- CTA FINAL SEÇÃO COMO FUNCIONA -->
+  <div style="text-align: center; margin-top: 32px; padding: 0 16px;">
+    <a href="https://pay.kiwify.com.br/JamocOx" class="btn-primary" target="_blank">
+      Quero Garantir Minha Vaga
+    </a>
   </div>
 </section>
 
